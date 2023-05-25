@@ -58,7 +58,10 @@ public class UserController {
     public User updateUser( @RequestBody User userDetails) {
         return userService.updateUser(userDetails);
     }
-
+    @PutMapping("/users/{userName}")
+    public User updatefatimaUser( @RequestBody User userDetails) {
+        return userService.updateUser(userDetails);
+    }
     @DeleteMapping("/users/{userName}")
     public Map<String, Boolean> deleteUser(@PathVariable(value = "userName") String userName) {
         return userService.deleteuser(userName);
